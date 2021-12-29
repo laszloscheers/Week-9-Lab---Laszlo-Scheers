@@ -3,7 +3,7 @@ function play(){
     var count=3
     do{
         count--;
-        var answer=prompt("Enter Rock, Paper or Scissors to play the game.");
+        var userAnswer=prompt("Enter Rock, Paper or Scissors to play the game.");
         var randomAnswer= Math.floor((Math.random() * 3) + 1);
         //alert(randomAnswer);
         var computerOption;
@@ -15,23 +15,23 @@ function play(){
         } else{
             computerOption="Scissors";
         }
-        alert("The computer has choosen "+computerOption+" and you have choosen "+answer+".");
+        alert("The computer has choosen "+computerOption+" and you have choosen "+userAnswer+".");
     
-        if(answer==computerOption){
+        if(userAnswer==computerOption){
             alert("That's a draw!");
-        } else if(answer=="Rock"){
+        } else if(userAnswer=="Rock"){
             if(computerOption=="Scissors"){
                 alert("You win!");
             } else{
                 alert("You loose!");
             }
-        } else if(answer=="Paper"){
+        } else if(userAnswer=="Paper"){
             if(computerOption=="Rock"){
                 alert("You win!");
             } else{
                 alert("You loose!");
             }
-        } else if(answer=="Scissors" && computerOption=="Paper"){
+        } else if(userAnswer=="Scissors" && computerOption=="Paper"){
             if(computerOption=="Paper"){
                 alert("You win!");
             } else{
@@ -40,6 +40,7 @@ function play(){
         } else{
             alert("Please, enter a valid input.");
         }
+        var answer=false;
         if(count>0){
             answer=confirm("Do you want to play again?");
         }
